@@ -10,13 +10,15 @@
 <h:body>
 
 	<h:form id="formPessoa">
-		<h:inputText/>
-		<br/>
-		<h:outputText value="Teste jsf"/>
-		
-		<h:commandButton value="Botão"/>
+		Nome: <h:inputText id="campoNome" value="#{pessoaBean.nome}" />
+		<br />
+		Sobrenome: <h:inputText id="campoSobrenome" value="#{pessoaBean.sobrenome}" />
+		<br />
+		<h:outputText value="#{pessoaBean.nomeCompleto}" />
+		<br />
+		<h:commandButton value="Mostar Nome" action="#{pessoaBean.mostrarNome}"/>
 	</h:form>
-	
+
 </h:body>
 
 </html>
